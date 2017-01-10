@@ -12,8 +12,8 @@ def load_data(filepath):
         return None
 
 
-def pretty_print_json(data_):
-    print(json.dumps(data_, indent=4, ensure_ascii=False, sort_keys=True))
+def pretty_print_json(data):
+    print(json.dumps(data, indent=4, ensure_ascii=False, sort_keys=True))
 
 
 if __name__ == '__main__':
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         print("You should specify a file to analyze!")
         sys.exit(0)
     if load_data(path_to_file):
-        data = load_data(path_to_file)
+        input_data = load_data(path_to_file)
     else:
         print("Incorrect path to the file!")
         sys.exit(0)
@@ -32,4 +32,4 @@ if __name__ == '__main__':
     #     output_file.write(pretty_print_json(data))
     # print('Привет')
 
-    pretty_print_json(data)
+    pretty_print_json(input_data)
