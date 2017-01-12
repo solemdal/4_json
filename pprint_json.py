@@ -28,8 +28,4 @@ if __name__ == '__main__':
         print("Incorrect path to the file!")
         sys.exit(0)
 
-    # with open("output.txt", "w") as output_file:
-    #     output_file.write(pretty_print_json(data))
-    # print('Привет')
-
     pretty_print_json(input_data)
